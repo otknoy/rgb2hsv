@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 import os
 import numpy
 import cv2
-
-def average(total, num):
-    return total / num
 
 imagename = "img/red_square.jpg"
 
@@ -30,12 +26,12 @@ s_value = hsvdata[:,:,1]
 v_value = hsvdata[:,:,2]
 
 # 各値の平均値
-mean_b = average(b_value.sum(), the_number_of_pixel)
-mean_g = average(g_value.sum(), the_number_of_pixel)
-mean_r = average(r_value.sum(), the_number_of_pixel)
-mean_h = average(h_value.sum(), the_number_of_pixel)
-mean_s = average(s_value.sum(), the_number_of_pixel)
-mean_v = average(v_value.sum(), the_number_of_pixel)
+mean_b = numpy.mean(b_value)
+mean_g = numpy.mean(g_value)
+mean_r = numpy.mean(r_value)
+mean_h = numpy.mean(h_value)
+mean_s = numpy.mean(s_value)
+mean_v = numpy.mean(v_value)
 
 print "R = " + str(mean_r), "G = " + str(mean_g), "B = " + str(mean_b)
 print "H = " + str(mean_h), "S = " + str(mean_s), "V = " + str(mean_v)
