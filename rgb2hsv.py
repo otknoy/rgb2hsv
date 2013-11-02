@@ -8,7 +8,6 @@ imagename = "img/red_square.jpg"
 
 # 画像読み込み
 imagedata = cv2.imread(imagename)
-imageheight, imagewidth = imagedata.shape[:2]
 
 # GRBからHSVに変換
 hsvdata = cv2.cvtColor(imagedata, cv2.COLOR_BGR2HSV)
